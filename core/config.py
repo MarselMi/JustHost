@@ -1,9 +1,14 @@
 from pydantic import BaseModel
-from pydantic.v1 import BaseSettings
+from pydantic_settings import BaseSettings
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
 
 
 class DbSettings(BaseModel):
-    url: str = f"postgres://postgres:admin@localhost:5432/vps"
+    url: str = os.getenv("DATABASE_URL")
     echo: bool = True
 
 
