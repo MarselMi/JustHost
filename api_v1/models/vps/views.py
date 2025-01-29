@@ -6,6 +6,7 @@ from .schemas import VpsUpdateSchemas, VpsSchemas, VpsCreateSchemas
 from api_v1.models.dependencies import object_by_uuid
 from . import crud
 
+
 router = APIRouter(tags=["Vps"])
 
 
